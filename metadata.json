@@ -1,0 +1,6 @@
+{
+  "name": "Sadhana Tracker",
+  "description": "Student Yoga, Sadhana & Meditation Tracker featuring real-time progress analytics, personalized mindfulness schedules, pranayama breathing, japa mala counter, and spiritual study logs.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

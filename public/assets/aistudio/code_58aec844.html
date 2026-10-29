@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#061326;color:#d6e3fd;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-tertiary-container": "#ffeedd", "on-primary-container": "#eeefff", "primary-fixed-dim": "#b4c5ff", "glass-border": "rgba(255, 255, 255, 0.28)", "on-surface-variant": "#c3c6d7", "flame-glow": "#FB923C", "on-secondary-container": "#b1b8cf", "on-primary-fixed-variant": "#003ea8", "on-background": "#d6e3fd", "inverse-on-surface": "#253145", "lotus-lavender": "#C7D2FE", "surface-tint": "#b4c5ff", "on-error": "#690005", "text-on-dark-primary": "#F8FAFC", "secondary-fixed": "#dbe2fa", "text-on-dark-secondary": "#94A3B8", "surface-variant": "#293549", "on-secondary-fixed-variant": "#3f4759", "surface-bright": "#2d3a4e", "secondary": "#bfc6dd", "surface-dim": "#061326", "text-on-glass-primary": "#0F172A", "tertiary-fixed-dim": "#ffb95f", "primary": "#b4c5ff", "background": "#061326", "on-tertiary-fixed-variant": "#653e00", "twilight-deep": "#0E2442", "outline": "#8d90a0", "on-secondary": "#293042", "sadhana-gold": "#FBBF24", "tertiary-container": "#996100", "surface-container-high": "#1e2a3e", "primary-container": "#2563eb", "peace-mint": "#34D399", "sacred-amber": "#F59E0B", "surface-container": "#132033", "error": "#ffb4ab", "surface": "#061326", "surface-container-lowest": "#020e21", "primary-fixed": "#dbe1ff", "on-primary": "#002a78", "surface-container-highest": "#293549", "surface-container-low": "#0f1c2f", "surface-glass-primary": "rgba(224, 231, 255, 0.14)", "inverse-surface": "#d6e3fd", "tertiary": "#ffb95f", "on-tertiary": "#472a00", "on-secondary-fixed": "#141b2c", "outline-variant": "#434655", "on-error-container": "#ffdad6", "error-container": "#93000a", "surface-glass-solid": "#E5EDFD", "on-primary-fixed": "#00174b", "on-tertiary-fixed": "#2a1700", "celestial-midnight": "#060D17", "inverse-primary": "#0053db", "secondary-fixed-dim": "#bfc6dd", "tertiary-fixed": "#ffddb8", "text-on-glass-secondary": "#475569", "secondary-container": "#41495c", "on-surface": "#d6e3fd" }, borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" }, spacing: { "margin-mobile": "1rem", "space-2xl": "2.5rem", "space-xl": "1.75rem", "space-lg": "1.25rem", "space-xs": "0.25rem", gutter: "1rem", "margin-tablet": "2rem", "space-sm": "0.5rem", "space-md": "0.75rem", margin: "1.25rem" }, fontFamily: { "headline-lg": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "label-caps": ["Plus Jakarta Sans"], "quote-italic": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"] }, fontSize: { "headline-lg": ["24px", { lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "600" }], "headline-xl": ["36px", { lineHeight: "44px", letterSpacing: "-0.02em", fontWeight: "700" }], "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }], "title-md": ["16px", { lineHeight: "24px", fontWeight: "600" }], "label-caps": ["11px", { lineHeight: "16px", letterSpacing: "0.08em", fontWeight: "700" }], "quote-italic": ["15px", { lineHeight: "24px", fontWeight: "400" }], "body-sm": ["12px", { lineHeight: "16px", fontWeight: "400" }], "headline-xl-mobile": ["28px", { lineHeight: "36px", letterSpacing: "-0.02em", fontWeight: "700" }], "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }], "label-md": ["13px", { lineHeight: "18px", fontWeight: "600" }], "headline-md": ["20px", { lineHeight: "28px", fontWeight: "600" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body text-on-surface flex flex-col min-h-screen selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-dim/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md min-w-0"><img alt="Sadhana Lotus Logo" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1Ub2peJvnDq0KcfTxrqmTVAl6_MuBqWMyP0H2dK0kKyYmxHYKqijOLBYnlFteONSNJHWAf5X4Oovq2o7ewATIiuRgG8FsKbumM6bvQZDjRneeEfN3I0VovDtHdiKUhstDENZWwsNTTIMVBPRs7fNu28_sKGjMuKx_ZBkLz4lMeCWtifMUyAKuGmU5J95Xp-AJWj3hA5bF-DLciAdijqMFaH3AoZHpyj7sb9vWeccwh34A"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-label-md text-label-md text-on-surface truncate">ABC KUMAR</span><span class="w-1 h-1 rounded-full bg-sadhana-gold shrink-0"></span><span class="font-label-caps text-label-caps text-on-surface-variant truncate">Class 1</span></div><span class="font-body-sm text-body-sm text-lotus-lavender truncate">Peaceful Afternoon • Home</span></div></div><div class="flex items-center gap-space-xs shrink-0"><div class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container/60 backdrop-blur-md shadow-[0_0_12px_rgba(251,191,36,0.15)]"><span class="material-symbols-outlined text-flame-glow text-[18px]">local_fire_department</span><span class="font-label-caps text-label-caps text-sadhana-gold">14D</span></div><button class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span></button><img alt="Profile" class="w-8 h-8 rounded-full object-cover shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuYGipbg7S9q5BlNNX7OUH-cu3FyHc9SHYFXw9juKSs7d-u1rIGMCqXMoH7CO9vqV2Z99qTftP1b8myCVpoKrxmVSNg10bDIpekViJC-h_Z11245DnFF9xsbvq7bcygGjRT7EsWZC7NnDgxJzLQDIDaYUasvWUR61INyBIiUQUCzvOFLzL__gmEStgOWZ1XAJuZ-rCuDnFxzMDN4zZKRKrk6NtihEygW-_O30kH6oJ"/></div></div></header><main class="flex flex-col relative w-full pt-20 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full pb-8 space-y-6">
+<!-- 1. Top Student Header Banner Card -->
+<section class="px-margin pt-2">
+<div class="relative overflow-hidden rounded-xl bg-surface-container-high/90 p-space-lg shadow-xl backdrop-blur-2xl">
+<!-- Ambient sacred halo background element -->
+<div class="absolute -right-12 -top-12 w-44 h-44 rounded-full bg-sadhana-gold/15 blur-3xl pointer-events-none"></div>
+<div class="absolute -left-10 -bottom-10 w-36 h-36 rounded-full bg-primary-container/20 blur-2xl pointer-events-none"></div>
+<div class="relative z-10 flex items-start justify-between">
+<div class="flex flex-col min-w-0 pr-space-sm">
+<div class="flex items-center gap-space-xs mb-1">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container-highest text-sadhana-gold font-label-caps text-label-caps tracking-wider">STUDENT PORTAL</span>
+<span class="font-body-sm text-body-sm text-lotus-lavender truncate">Thu, Oct 29</span>
+</div>
+<h2 class="font-headline-xl-mobile text-headline-xl-mobile text-text-on-dark-primary tracking-tight">ABC KUMAR</h2>
+<div class="flex items-center gap-space-xs mt-0.5">
+<span class="font-label-md text-label-md text-primary-fixed-dim">Class 1</span>
+<span class="w-1.5 h-1.5 rounded-full bg-peace-mint"></span>
+<span class="font-body-sm text-body-sm text-peace-mint">Peaceful Afternoon</span>
+</div>
+</div>
+<!-- Diya / Flame Icon container with ambient sacred aura -->
+<div class="flex flex-col items-center shrink-0">
+<div class="relative flex items-center justify-center w-14 h-14 rounded-full bg-surface-container shadow-[0_0_24px_rgba(251,146,60,0.35)]">
+<div class="absolute inset-0 rounded-full bg-gradient-to-t from-sacred-amber/30 to-flame-glow/10 animate-pulse"></div>
+<span class="material-symbols-outlined text-flame-glow text-[30px]" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+</div>
+<span class="mt-1 font-label-caps text-label-caps text-sadhana-gold">DIVINE FLAME</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. DAILY SADHNA Hero Workout Card -->
+<section class="px-margin">
+<div class="relative overflow-hidden rounded-xl bg-twilight-deep/90 shadow-2xl backdrop-blur-2xl">
+<!-- Watermark mandala motif -->
+<div class="absolute right-0 bottom-0 w-44 h-44 opacity-10 pointer-events-none translate-x-10 translate-y-10">
+<svg class="w-full h-full fill-current text-sadhana-gold" viewbox="0 0 100 100">
+<circle cx="50" cy="50" fill="none" r="45" stroke="currentColor" stroke-dasharray="2,2" stroke-width="1.5"></circle>
+<circle cx="50" cy="50" fill="none" r="32" stroke="currentColor" stroke-width="1"></circle>
+<path d="M50 5 L55 35 L85 20 L65 45 L95 50 L65 55 L85 80 L55 65 L50 95 L45 65 L15 80 L35 55 L5 50 L35 45 L15 20 L45 35 Z" fill="none" stroke="currentColor" stroke-width="1"></path>
+</svg>
+</div>
+<div class="relative z-10 p-space-lg flex flex-col space-y-4">
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-sadhana-gold/20 text-sadhana-gold font-label-caps text-label-caps">
+<span class="material-symbols-outlined text-[14px]">auto_awesome</span>
+            DAILY SADHANA
+          </span>
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-surface-container-high/80 text-lotus-lavender font-label-caps text-label-caps">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+            20 MIN
+          </span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-text-on-dark-primary font-bold">20-Minute Spiritual Workout</h3>
+<p class="mt-1 font-body-md text-body-md text-secondary">Guided Sadhana: Mantra Meditation, Mindful Centering &amp; Inner Reflection.</p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<button class="flex items-center justify-center gap-2 h-12 px-6 rounded-full bg-primary-container text-text-on-dark-primary shadow-lg shadow-primary-container/40 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+<span class="font-label-md text-label-md tracking-wide">Begin Sadhana</span>
+</button>
+<div class="flex -space-x-2">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-lotus-lavender text-label-caps font-label-caps">OM</div>
+<div class="w-8 h-8 rounded-full bg-tertiary-container flex items-center justify-center text-sadhana-gold text-label-caps font-label-caps">14D</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Daily Sadhna Quick-Action Pill Rail -->
+<section class="flex flex-col space-y-2">
+<div class="px-margin flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-on-surface-variant">SACRED DISCIPLINES</span>
+<span class="font-body-sm text-body-sm text-primary">Slide to explore</span>
+</div>
+<div class="flex overflow-x-auto space-x-3 px-margin py-1 no-scrollbar">
+<!-- Japa Mantra -->
+<button class="flex items-center gap-3 shrink-0 px-4 py-3 rounded-full bg-surface-container-high text-left active:scale-95 transition-transform shadow-md">
+<span class="flex items-center justify-center w-9 h-9 rounded-full bg-twilight-deep text-sadhana-gold">
+<span class="material-symbols-outlined text-[20px]">all_inclusive</span>
+</span>
+<div class="flex flex-col pr-1">
+<span class="font-label-md text-label-md text-text-on-dark-primary">Japa Mantra</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Chant 108 Beads</span>
+</div>
+</button>
+<!-- Meditate -->
+<button class="flex items-center gap-3 shrink-0 px-4 py-3 rounded-full bg-surface-container-high text-left active:scale-95 transition-transform shadow-md">
+<span class="flex items-center justify-center w-9 h-9 rounded-full bg-twilight-deep text-peace-mint">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">self_improvement</span>
+</span>
+<div class="flex flex-col pr-1">
+<span class="font-label-md text-label-md text-text-on-dark-primary">Meditate</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Dhyana Silence</span>
+</div>
+</button>
+<!-- Introspection -->
+<button class="flex items-center gap-3 shrink-0 px-4 py-3 rounded-full bg-surface-container-high text-left active:scale-95 transition-transform shadow-md">
+<span class="flex items-center justify-center w-9 h-9 rounded-full bg-twilight-deep text-lotus-lavender">
+<span class="material-symbols-outlined text-[20px]">menu_book</span>
+</span>
+<div class="flex flex-col pr-1">
+<span class="font-label-md text-label-md text-text-on-dark-primary">Introspection</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Daily Diary</span>
+</div>
+</button>
+<!-- Aum Sacred -->
+<button class="flex items-center gap-3 shrink-0 px-4 py-3 rounded-full bg-surface-container-high text-left active:scale-95 transition-transform shadow-md">
+<span class="flex items-center justify-center w-9 h-9 rounded-full bg-twilight-deep text-sadhana-gold">
+<span class="material-symbols-outlined text-[20px]">groups</span>
+</span>
+<div class="flex flex-col pr-1">
+<span class="font-label-md text-label-md text-text-on-dark-primary">Aum Sacred</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Community Circle</span>
+</div>
+</button>
+<!-- Pranayam Breath -->
+<button class="flex items-center gap-3 shrink-0 px-4 py-3 rounded-full bg-surface-container-high text-left active:scale-95 transition-transform shadow-md mr-margin">
+<span class="flex items-center justify-center w-9 h-9 rounded-full bg-twilight-deep text-peace-mint">
+<span class="material-symbols-outlined text-[20px]">air</span>
+</span>
+<div class="flex flex-col pr-1">
+<span class="font-label-md text-label-md text-text-on-dark-primary">Pranayam</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Breath Harmony</span>
+</div>
+</button>
+</div>
+</section>
+<!-- 4. DAILY YOGA Section -->
+<section class="px-margin flex flex-col space-y-4">
+<div class="rounded-xl bg-surface-container-high p-space-lg shadow-xl">
+<div class="flex items-center justify-between pb-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-peace-mint text-[22px]">fitness_center</span>
+<h3 class="font-title-md text-title-md text-text-on-dark-primary">DAILY YOGA</h3>
+</div>
+<span class="font-label-caps text-label-caps text-peace-mint">ACTIVE DISCIPLINE</span>
+</div>
+<!-- Checklist Links -->
+<div class="flex flex-col space-y-2 pt-1">
+<a class="flex items-center justify-between p-3 rounded-lg bg-surface-container hover:bg-surface-bright transition-colors" href="#">
+<div class="flex items-center gap-3">
+<span class="flex items-center justify-center w-7 h-7 rounded-full bg-surface-container-highest text-peace-mint">
+<span class="material-symbols-outlined text-[16px]">air</span>
+</span>
+<span class="font-body-md text-body-md text-on-surface">Start Pranayam</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">chevron_right</span>
+</a>
+<a class="flex items-center justify-between p-3 rounded-lg bg-surface-container hover:bg-surface-bright transition-colors" href="#">
+<div class="flex items-center gap-3">
+<span class="flex items-center justify-center w-7 h-7 rounded-full bg-surface-container-highest text-sadhana-gold">
+<span class="material-symbols-outlined text-[16px]">wb_sunny</span>
+</span>
+<span class="font-body-md text-body-md text-on-surface">Steps for Surya Namaskar</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">chevron_right</span>
+</a>
+<a class="flex items-center justify-between p-3 rounded-lg bg-surface-container hover:bg-surface-bright transition-colors" href="#">
+<div class="flex items-center gap-3">
+<span class="flex items-center justify-center w-7 h-7 rounded-full bg-surface-container-highest text-lotus-lavender">
+<span class="material-symbols-outlined text-[16px]">category</span>
+</span>
+<span class="font-body-md text-body-md text-on-surface">Category-Wise Yoga</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">chevron_right</span>
+</a>
+</div>
+</div>
+<!-- Horizontal scroll of Yoga Focus cards -->
+<div class="flex flex-col space-y-2">
+<span class="font-label-caps text-label-caps text-on-surface-variant">TARGETED ASANA FLOWS</span>
+<div class="flex overflow-x-auto space-x-3 -mx-margin px-margin pb-2 no-scrollbar">
+<!-- Mind Fresh Yoga -->
+<div class="shrink-0 w-44 rounded-xl bg-surface-container-high overflow-hidden shadow-md flex flex-col">
+<div class="h-28 relative">
+<img class="w-full h-full object-cover" data-alt="A serene young student practicing grounding yoga seated outdoors in twilight mountain stillness with soft ambient golden sun rays and deep blue atmospheric hues" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLpch-Nc-8VI1r-ZAprRl7RmH5YGRrJ0JWMO5G1Z1HTQA0Sp3xrraBi6RJAV5jaKVOzplaok6rWEC_cq_ALnKwd6stj2urClFsO1TVxs6_xUaC5ToK19P5sU4uFIuH8WqW5p4ymebIQkjG1_cCE0oMeLtmi2S5yY57BzV-OFz2TF1LDSULvk5_FDmpAaOVaHGmh8hgietx7npBCz-cQRjPGob2GFT1NhhF_esmGP0_"/>
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-celestial-midnight/80 font-label-caps text-label-caps text-peace-mint">15 Min</span>
+</div>
+<div class="p-3 flex flex-col flex-1 justify-between">
+<span class="font-title-md text-title-md text-text-on-dark-primary leading-snug">Mind Fresh Yoga</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Mental clarity &amp; alertness</span>
+</div>
+</div>
+<!-- Memorise Yoga -->
+<div class="shrink-0 w-44 rounded-xl bg-surface-container-high overflow-hidden shadow-md flex flex-col">
+<div class="h-28 relative">
+<img class="w-full h-full object-cover" data-alt="A focused youth performing quiet pranayama seated posture on a meditation mat under soft temple lighting in glowing indigo ambiance" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALs1tLEG7ITshB-_zaNSgBbApTNu-cyMqvDOKeKRse34OIIgI1uitN_eKLnnh4KkaRbnlvc1xLrjUxiFLal0tWJjpLjwO8Qho5f7t1Rbq6MJHLliAiAfPLwjNrggdAtMGIqneA2zoEXpori7ariP4DmEAw0yf0N5sP-l1d702iEaV5vIbrSVdJVKvsBbaG3I9g9d33U7wmLMTUshJOhoOccu5jq5IStcCCq3w95tse"/>
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-celestial-midnight/80 font-label-caps text-label-caps text-sadhana-gold">20 Min</span>
+</div>
+<div class="p-3 flex flex-col flex-1 justify-between">
+<span class="font-title-md text-title-md text-text-on-dark-primary leading-snug">Memorise Yoga</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Memory retention &amp; dharana</span>
+</div>
+</div>
+<!-- Celibacy (Brahmacharya) Yoga -->
+<div class="shrink-0 w-44 rounded-xl bg-surface-container-high overflow-hidden shadow-md flex flex-col">
+<div class="h-28 relative">
+<img class="w-full h-full object-cover" data-alt="Spiritual practitioner in balanced vrikshasana tree posture at twilight surrounded by ethereal subtle golden aura and calm blue night sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBesZuSvu02SK8Xf4G4vdV4tGzTCwqi5s1G3gBwL0jJn5-hyH_HA3jX4IE9ViETBAHXkbNqbJj0eRf0lJvgZ-9Ym5cKYEb9ckKj4aUAMHtSs2OnyK9FNWOZ539A03_ijs1YGFCMmRNJ8nzhOJPzyLIuy8WHQM4OPQCJFzrr8fUtkV5wrihIjwuaWKoASNZoQqBbWil6LUhqcmyX7EBbJkRYdkOPuYNZ3QAlu7dmH4bj"/>
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-celestial-midnight/80 font-label-caps text-label-caps text-flame-glow">25 Min</span>
+</div>
+<div class="p-3 flex flex-col flex-1 justify-between">
+<span class="font-title-md text-title-md text-text-on-dark-primary leading-snug">Brahmacharya</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Ojas preservation &amp; poise</span>
+</div>
+</div>
+<!-- Leadership Yoga -->
+<div class="shrink-0 w-44 rounded-xl bg-surface-container-high overflow-hidden shadow-md flex flex-col">
+<div class="h-28 relative">
+<img class="w-full h-full object-cover" data-alt="Dynamic virabhadrasana warrior posture showing strength and calmness amidst serene Vedic architecture illuminated by warm oil lamps" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDN8txL7xHz4MnfWiyGyfv0YF0IUjpqQi9oC2b4PJGtLQ4Zb3vLtzwT_Rh389WWzj7I3ADricXkRafddiPRxQ5UyNBYTMTSSYsdG6VDi7lttCazPR5Q92sR0cOHoh_WtlnxhMYuaQGpf1MjH6U8z1k-hclq5TEYokWZJ9NVMEtpoYckUEaTMuFvF1MTeJ_LtXPSssfCZFrEtEq6wXQVIdBPAD-PcEHChHRA8U8AwRI3"/>
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-celestial-midnight/80 font-label-caps text-label-caps text-lotus-lavender">18 Min</span>
+</div>
+<div class="p-3 flex flex-col flex-1 justify-between">
+<span class="font-title-md text-title-md text-text-on-dark-primary leading-snug">Leadership Yoga</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Confidence &amp; stamina</span>
+</div>
+</div>
+<!-- Huta Yoga -->
+<div class="shrink-0 w-44 rounded-xl bg-surface-container-high overflow-hidden shadow-md flex flex-col mr-margin">
+<div class="h-28 relative">
+<img class="w-full h-full object-cover" data-alt="Traditional sacred hatha posture practice with rhythmic breathing in a meditative hall with incense smoke and celestial soft illumination" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTr_55p6lZ44Qc9ZqoqtCz0aw_cp9fmt86aeIktOKeHEvbVH9Aiwx_6xwe1LjzZe-MZ2c1pD_bZ7qaBJpF8FmnsVMIDpDK0t8GAJ5hDqxOUAIs5MNJSWt2vxg5VBnD-yx-RG9QDlRFiEMVEwJ3oabzuGqq12NhXwiVGWyl79XYKlh1Vga94zliOOmlqF3C34eKRoiolIefDJP8wHIXfY3Hu-YmcfnjT5SV440Qngly"/>
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-celestial-midnight/80 font-label-caps text-label-caps text-sadhana-gold">30 Min</span>
+</div>
+<div class="p-3 flex flex-col flex-1 justify-between">
+<span class="font-title-md text-title-md text-text-on-dark-primary leading-snug">Huta Yoga</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Vital force balance</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. DAILY SWADHYAYA (Study) Section -->
+<section class="px-margin flex flex-col space-y-4">
+<div class="rounded-xl bg-surface-container-high p-space-lg shadow-xl">
+<div class="flex items-center justify-between pb-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sadhana-gold text-[22px]">auto_stories</span>
+<h3 class="font-title-md text-title-md text-text-on-dark-primary">DAILY SWADHYAYA</h3>
+</div>
+<span class="font-label-caps text-label-caps text-sadhana-gold">SELF-STUDY</span>
+</div>
+<!-- Links list -->
+<div class="flex flex-col space-y-2 pt-1">
+<a class="flex items-center justify-between p-3 rounded-lg bg-surface-container hover:bg-surface-bright transition-colors" href="#">
+<span class="font-body-md text-body-md text-on-surface">Proper Guidelines For Study</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">chevron_right</span>
+</a>
+<a class="flex items-center justify-between p-3 rounded-lg bg-surface-container hover:bg-surface-bright transition-colors" href="#">
+<span class="font-body-md text-body-md text-on-surface">Books For Particular Skills</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">chevron_right</span>
+</a>
+<a class="flex items-center justify-between p-3 rounded-lg bg-surface-container hover:bg-surface-bright transition-colors" href="#">
+<span class="font-body-md text-body-md text-on-surface">Student Related Spiritual Book</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">chevron_right</span>
+</a>
+</div>
+<!-- Explore Action -->
+<div class="flex items-center justify-between pt-4 mt-2">
+<button class="flex items-center gap-2 h-11 px-5 rounded-full bg-primary-container text-text-on-dark-primary shadow-md active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+<span class="font-label-md text-label-md">Explore</span>
+</button>
+<span class="inline-flex items-center gap-1 font-label-caps text-label-caps text-lotus-lavender px-3 py-1 rounded-full bg-surface-container">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 20 MIN
+        </span>
+</div>
+</div>
+<!-- Swadhyaya Book Shelf Carousel -->
+<div class="flex flex-col space-y-2">
+<span class="font-label-caps text-label-caps text-on-surface-variant">RECOMMENDED SCRIPTURAL WISDOM</span>
+<div class="flex overflow-x-auto space-x-3 -mx-margin px-margin pb-2 no-scrollbar">
+<!-- Book 1 -->
+<div class="shrink-0 w-36 rounded-xl bg-surface-container p-2 flex flex-col space-y-2 shadow-md">
+<div class="aspect-[3/4] w-full rounded-lg overflow-hidden relative shadow">
+<img class="w-full h-full object-cover" data-alt="Cover of holy Bhagavad Gita featuring an artistic golden chariot silhouette on twilight royal indigo background with elegant Sanskrit script typography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuFbaTCaA7tUIMcq5WDOMkqQe9c8hYeVUOuG41YhlAkSusSjaZkKR4PzIYixyOf0wsBxbvMFVegU9ggrVNdcHvN5n1-Sv0kJWI7OIrRXb7L3Wca5lvA6lWUP4nlzvtL4RrQbEkEHfrN6XDyeRkKEpmXMBvaTdR_Ju9Qmw8QLNeAUp_ldUlb7pkh7dx40TKDnxLksRb6TD0fRlN9GqWWJcaHn-tJ6Uy2jcynAGD12LT"/>
+<div class="absolute inset-0 bg-gradient-to-t from-celestial-midnight/80 via-transparent to-transparent"></div>
+<span class="absolute bottom-1.5 left-2 font-label-caps text-label-caps text-sadhana-gold">Ch. 2</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-text-on-dark-primary line-clamp-1 leading-snug">Bhagavad Gita</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Youth Edition</span>
+</div>
+</div>
+<!-- Book 2 -->
+<div class="shrink-0 w-36 rounded-xl bg-surface-container p-2 flex flex-col space-y-2 shadow-md">
+<div class="aspect-[3/4] w-full rounded-lg overflow-hidden relative shadow">
+<img class="w-full h-full object-cover" data-alt="Minimalist book cover titled Mind Mastery featuring glowing sacred geometric lotus mandala pattern on midnight navy blue with warm candlelight tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuVogMT4iNHS8AkNBJ7ZgcecGmYRgAun1L5nOZXjthU2tWshBezAHu1LdWUBuWrH2zOLmBIcn4EAI1qlh5LhZwuMUqBA9baaO8TvE1ZN0es1gkch6MtxO2CC-9a7TuI3kgWJAnMoL7BYn9d1OKsowNVUSsfSQUA5fD0MJycrXqlOOkcp7J1bgTa3fiAMSZTkwAuF4jtb2rpdIOWfPv-loMiJobi-MEt6U8tLjgcGwL"/>
+<div class="absolute inset-0 bg-gradient-to-t from-celestial-midnight/80 via-transparent to-transparent"></div>
+<span class="absolute bottom-1.5 left-2 font-label-caps text-label-caps text-peace-mint">Vol. 1</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-text-on-dark-primary line-clamp-1 leading-snug">Mind Mastery</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Thought Control</span>
+</div>
+</div>
+<!-- Book 3 -->
+<div class="shrink-0 w-36 rounded-xl bg-surface-container p-2 flex flex-col space-y-2 shadow-md">
+<div class="aspect-[3/4] w-full rounded-lg overflow-hidden relative shadow">
+<img class="w-full h-full object-cover" data-alt="Spiritual manual cover titled Self Control showing serene meditative person silhouette illuminated by internal flame of discipline in dark blue atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZNVBw0sRaa5TNBam6ViwxS4fn09XRkGyhbhUB5HxAXRX-0XDyXnOppCTh0hVzwlnzzRZJ7tpLfEM5zkiBNctdr629HVihQeHJujclyCtciRKRrOdqa8LEPXrUAOZZseRUczBZcI2RQ9lVQTnNhaQapn40o4fk3U7dr0zOrm-sokRmRQrhZSIkZsKUWvZPg5G0_SyAidqxsp-pbCucgho9kwYKBSoUQwBI0ENdN4Gq"/>
+<div class="absolute inset-0 bg-gradient-to-t from-celestial-midnight/80 via-transparent to-transparent"></div>
+<span class="absolute bottom-1.5 left-2 font-label-caps text-label-caps text-flame-glow">Daily</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-text-on-dark-primary line-clamp-1 leading-snug">Self Control</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Brahmacharya Path</span>
+</div>
+</div>
+<!-- Book 4 -->
+<div class="shrink-0 w-36 rounded-xl bg-surface-container p-2 flex flex-col space-y-2 shadow-md mr-margin">
+<div class="aspect-[3/4] w-full rounded-lg overflow-hidden relative shadow">
+<img class="w-full h-full object-cover" data-alt="Ancient parchment style spiritual book cover titled Ancient Wisdom with gold foil yantra design on deep deep midnight indigo background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCK0ju85D2WfkywswEXB5hVVBJUe95-82Hobmr93haMbiO6Ag-2ewFXxjg5bgLjaMs-ZlV4iiDpwicbQTuZAZjhwR5AvzEoTuUaVZ2UOJqlB2fPn11jC8J3_Py5Q_dmZ3NCZ0O0FD3o8xOhIAGtQOjRjqE7jxjkc3NBlzYCiwki5bXojEFN5KnZV1VluS2n72xJtnxwOVhZSX0a_Cd4TNZEXXevNxUAw8isBZM7_d7a"/>
+<div class="absolute inset-0 bg-gradient-to-t from-celestial-midnight/80 via-transparent to-transparent"></div>
+<span class="absolute bottom-1.5 left-2 font-label-caps text-label-caps text-lotus-lavender">Upanishads</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-text-on-dark-primary line-clamp-1 leading-snug">Ancient Wisdom</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Vedic Principles</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. SANYAMA (Self-Discipline & Emotion Control) Section -->
+<section class="px-margin flex flex-col space-y-3">
+<div class="rounded-xl bg-twilight-deep/80 p-space-lg shadow-xl backdrop-blur-xl">
+<div class="flex items-center justify-between pb-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-flame-glow text-[22px]">psychology</span>
+<h3 class="font-title-md text-title-md text-text-on-dark-primary">SANYAMA</h3>
+</div>
+<span class="font-label-caps text-label-caps text-flame-glow">INNER HARMONY</span>
+</div>
+<p class="font-body-md text-body-md text-secondary mt-1">
+        Self-Discipline &amp; Emotion Control for academic serenity and mental poise.
+      </p>
+<a class="mt-3 flex items-center justify-between p-3 rounded-lg bg-surface-container-high/90 hover:bg-surface-bright transition-colors" href="#">
+<span class="font-body-md text-body-md text-on-surface pr-2">
+          Give answer and find Solution To Control Your Thought, Emotion And Action
+        </span>
+<span class="material-symbols-outlined text-sadhana-gold text-[20px] shrink-0">arrow_forward</span>
+</a>
+<div class="flex items-center justify-between pt-4">
+<button class="flex items-center gap-2 h-11 px-5 rounded-full bg-sadhana-gold text-on-tertiary font-bold shadow-md shadow-sadhana-gold/20 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+<span class="font-label-md text-label-md">Begin</span>
+</button>
+<span class="inline-flex items-center gap-1 font-label-caps text-label-caps text-on-surface px-3 py-1 rounded-full bg-surface-container">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 10 MIN
+        </span>
+</div>
+</div>
+<!-- Horizontal cards for reflection & thought logs -->
+<div class="flex overflow-x-auto space-x-3 -mx-margin px-margin pb-1 no-scrollbar">
+<div class="shrink-0 w-64 p-3.5 rounded-xl bg-surface-container-high flex flex-col space-y-1.5 shadow-md">
+<span class="font-label-caps text-label-caps text-sadhana-gold">PROMPT OF THE DAY</span>
+<h4 class="font-title-md text-title-md text-text-on-dark-primary">Impulse &amp; Distraction Log</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Observe urges today without immediate reaction. Record inner triggers.</p>
+</div>
+<div class="shrink-0 w-64 p-3.5 rounded-xl bg-surface-container-high flex flex-col space-y-1.5 shadow-md mr-margin">
+<span class="font-label-caps text-label-caps text-peace-mint">SOLUTION ARCHIVE</span>
+<h4 class="font-title-md text-title-md text-text-on-dark-primary">Anger Transformation</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Chant Om mentally 5 times when agitated before replying to others.</p>
+</div>
+</div>
+</section>
+<!-- 7. SEVA (Volunteering & Student Involvement) Section -->
+<section class="px-margin flex flex-col space-y-3">
+<div class="rounded-xl bg-surface-container-high p-space-lg shadow-xl">
+<div class="flex items-center justify-between pb-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">volunteer_activism</span>
+<h3 class="font-title-md text-title-md text-text-on-dark-primary">SEVA &amp; INVOLVEMENT</h3>
+</div>
+<span class="font-label-caps text-label-caps text-primary">KARMA YOGA</span>
+</div>
+<a class="mt-1 flex items-center justify-between p-3 rounded-lg bg-surface-container hover:bg-surface-bright transition-colors" href="#">
+<span class="font-body-md text-body-md text-on-surface pr-2">
+          Take Part in Service and Be an active Volunteer - Improve inner Happiness and Satisfaction
+        </span>
+<span class="material-symbols-outlined text-primary-fixed-dim text-[18px] shrink-0">chevron_right</span>
+</a>
+<!-- Badges -->
+<div class="flex items-center gap-2 pt-3">
+<button class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-primary-container text-text-on-dark-primary font-label-md text-label-md active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[16px]">handshake</span>
+          Our Program
+        </button>
+<span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container text-peace-mint font-label-md text-label-md">
+<span class="w-2 h-2 rounded-full bg-peace-mint animate-pulse"></span>
+          Active Volunteer
+        </span>
+</div>
+<!-- Quick action icons row -->
+<div class="grid grid-cols-5 gap-2 pt-4 mt-2">
+<a class="flex flex-col items-center justify-center p-2 rounded-lg bg-surface-container hover:bg-surface-bright transition-colors text-center" href="#">
+<span class="material-symbols-outlined text-sadhana-gold text-[22px]">assignment_turned_in</span>
+<span class="mt-1 font-label-caps text-[10px] text-on-surface truncate w-full">Task</span>
+</a>
+<a class="flex flex-col items-center justify-center p-2 rounded-lg bg-surface-container hover:bg-surface-bright transition-colors text-center" href="#">
+<span class="material-symbols-outlined text-peace-mint text-[22px]">fact_check</span>
+<span class="mt-1 font-label-caps text-[10px] text-on-surface truncate w-full">Attendance</span>
+</a>
+<a class="flex flex-col items-center justify-center p-2 rounded-lg bg-surface-container hover:bg-surface-bright transition-colors text-center" href="#">
+<span class="material-symbols-outlined text-lotus-lavender text-[22px]">calendar_today</span>
+<span class="mt-1 font-label-caps text-[10px] text-on-surface truncate w-full">TimeTable</span>
+</a>
+<a class="flex flex-col items-center justify-center p-2 rounded-lg bg-surface-container hover:bg-surface-bright transition-colors text-center" href="#">
+<span class="material-symbols-outlined text-secondary text-[22px]">info</span>
+<span class="mt-1 font-label-caps text-[10px] text-on-surface truncate w-full">Details</span>
+</a>
+<a class="flex flex-col items-center justify-center p-2 rounded-lg bg-surface-container hover:bg-surface-bright transition-colors text-center" href="#">
+<span class="material-symbols-outlined text-flame-glow text-[22px]">campaign</span>
+<span class="mt-1 font-label-caps text-[10px] text-on-surface truncate w-full">Events</span>
+</a>
+</div>
+</div>
+</section>
+<!-- 8. EVENTS / COURSES Grid & Carousels -->
+<section class="px-margin flex flex-col space-y-3 pb-6">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sadhana-gold text-[22px]">event_note</span>
+<h3 class="font-title-md text-title-md text-text-on-dark-primary">EVENTS &amp; COURSES</h3>
+</div>
+<span class="font-label-caps text-label-caps text-primary">SEMESTER VIEW</span>
+</div>
+<!-- Row 1: PDC Courses, 2-Hour Weekly Workshop, TimeTable, Details, Events -->
+<div class="flex flex-col space-y-2">
+<span class="font-label-caps text-label-caps text-on-surface-variant">CORE WORKSHOPS &amp; SCHEDULE</span>
+<div class="flex overflow-x-auto space-x-3 -mx-margin px-margin pb-1 no-scrollbar">
+<!-- PDC Courses -->
+<div class="shrink-0 w-48 p-4 rounded-xl bg-surface-container-high flex flex-col justify-between shadow-md">
+<div>
+<span class="px-2 py-0.5 rounded-full bg-primary-container text-on-primary font-label-caps text-[10px]">CERTIFICATION</span>
+<h4 class="mt-2 font-title-md text-title-md text-text-on-dark-primary">PDC Courses</h4>
+<p class="mt-1 font-body-sm text-body-sm text-on-surface-variant">Personality Development &amp; Character Building.</p>
+</div>
+<span class="mt-3 font-label-caps text-label-caps text-primary-fixed-dim">Enrolled • Module 3</span>
+</div>
+<!-- 2-Hour Weekly Workshop -->
+<div class="shrink-0 w-48 p-4 rounded-xl bg-surface-container-high flex flex-col justify-between shadow-md">
+<div>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-container text-sadhana-gold font-label-caps text-[10px]">WEEKLY LIVE</span>
+<h4 class="mt-2 font-title-md text-title-md text-text-on-dark-primary">2-Hr Workshop</h4>
+<p class="mt-1 font-body-sm text-body-sm text-on-surface-variant">Interactive spiritual debate &amp; meditation practice.</p>
+</div>
+<span class="mt-3 font-label-caps text-label-caps text-sadhana-gold">Sunday 08:00 AM</span>
+</div>
+<!-- TimeTable Card -->
+<div class="shrink-0 w-44 p-4 rounded-xl bg-surface-container flex flex-col justify-between shadow-md">
+<div>
+<span class="material-symbols-outlined text-peace-mint text-[24px]">calendar_month</span>
+<h4 class="mt-2 font-title-md text-title-md text-text-on-dark-primary">TimeTable</h4>
+<p class="mt-1 font-body-sm text-body-sm text-on-surface-variant">Daily routine chart.</p>
+</div>
+<span class="mt-3 font-label-caps text-label-caps text-peace-mint">View Slots →</span>
+</div>
+<!-- Details Card -->
+<div class="shrink-0 w-44 p-4 rounded-xl bg-surface-container flex flex-col justify-between shadow-md">
+<div>
+<span class="material-symbols-outlined text-lotus-lavender text-[24px]">description</span>
+<h4 class="mt-2 font-title-md text-title-md text-text-on-dark-primary">Syllabus Details</h4>
+<p class="mt-1 font-body-sm text-body-sm text-on-surface-variant">Curriculum guide.</p>
+</div>
+<span class="mt-3 font-label-caps text-label-caps text-lotus-lavender">Read Guide →</span>
+</div>
+<!-- Events Calendar Card -->
+<div class="shrink-0 w-44 p-4 rounded-xl bg-surface-container flex flex-col justify-between shadow-md mr-margin">
+<div>
+<span class="material-symbols-outlined text-flame-glow text-[24px]">celebration</span>
+<h4 class="mt-2 font-title-md text-title-md text-text-on-dark-primary">Annual Events</h4>
+<p class="mt-1 font-body-sm text-body-sm text-on-surface-variant">Gita Jayanti festival.</p>
+</div>
+<span class="mt-3 font-label-caps text-label-caps text-flame-glow">Coming Up →</span>
+</div>
+</div>
+</div>
+<!-- Row 2: Study Booster, Scientific Reasoning, Improve Skills, Fasting Discipline, Ask Doubt -->
+<div class="flex flex-col space-y-2 pt-1">
+<span class="font-label-caps text-label-caps text-on-surface-variant">SPECIALIZED STUDENT MODULES</span>
+<div class="flex overflow-x-auto space-x-3 -mx-margin px-margin pb-1 no-scrollbar">
+<!-- Study Booster -->
+<div class="shrink-0 w-44 p-3.5 rounded-xl bg-surface-container-high flex flex-col justify-between shadow-md">
+<div>
+<div class="flex items-center gap-1.5 text-peace-mint">
+<span class="material-symbols-outlined text-[18px]">psychology_alt</span>
+<span class="font-label-caps text-[10px]">FOCUS</span>
+</div>
+<h4 class="mt-2 font-title-md text-title-md text-text-on-dark-primary leading-tight">Study Booster</h4>
+<p class="mt-1 font-body-sm text-body-sm text-on-surface-variant">Exam focus techniques</p>
+</div>
+<span class="mt-3 font-label-caps text-label-caps text-peace-mint">Start Drill</span>
+</div>
+<!-- Scientific Reasoning on Tradition -->
+<div class="shrink-0 w-44 p-3.5 rounded-xl bg-surface-container-high flex flex-col justify-between shadow-md">
+<div>
+<div class="flex items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-[18px]">science</span>
+<span class="font-label-caps text-[10px]">RATIONALE</span>
+</div>
+<h4 class="mt-2 font-title-md text-title-md text-text-on-dark-primary leading-tight">Vedic Science</h4>
+<p class="mt-1 font-body-sm text-body-sm text-on-surface-variant">Scientific reasoning behind traditions</p>
+</div>
+<span class="mt-3 font-label-caps text-label-caps text-primary">6 Chapters</span>
+</div>
+<!-- Improve Skills & Values -->
+<div class="shrink-0 w-44 p-3.5 rounded-xl bg-surface-container-high flex flex-col justify-between shadow-md">
+<div>
+<div class="flex items-center gap-1.5 text-sadhana-gold">
+<span class="material-symbols-outlined text-[18px]">workspace_premium</span>
+<span class="font-label-caps text-[10px]">VALUES</span>
+</div>
+<h4 class="mt-2 font-title-md text-title-md text-text-on-dark-primary leading-tight">Skills &amp; Values</h4>
+<p class="mt-1 font-body-sm text-body-sm text-on-surface-variant">Integrity, speech &amp; seva</p>
+</div>
+<span class="mt-3 font-label-caps text-label-caps text-sadhana-gold">Explore</span>
+</div>
+<!-- Fasting Discipline -->
+<div class="shrink-0 w-44 p-3.5 rounded-xl bg-surface-container-high flex flex-col justify-between shadow-md">
+<div>
+<div class="flex items-center gap-1.5 text-flame-glow">
+<span class="material-symbols-outlined text-[18px]">spa</span>
+<span class="font-label-caps text-[10px]">UPAVASA</span>
+</div>
+<h4 class="mt-2 font-title-md text-title-md text-text-on-dark-primary leading-tight">Fasting Rules</h4>
+<p class="mt-1 font-body-sm text-body-sm text-on-surface-variant">Ekadashi &amp; sattvic food</p>
+</div>
+<span class="mt-3 font-label-caps text-label-caps text-flame-glow">Calendar</span>
+</div>
+<!-- Ask Doubt / Debate -->
+<div class="shrink-0 w-44 p-3.5 rounded-xl bg-surface-container-high flex flex-col justify-between shadow-md mr-margin">
+<div>
+<div class="flex items-center gap-1.5 text-lotus-lavender">
+<span class="material-symbols-outlined text-[18px]">forum</span>
+<span class="font-label-caps text-[10px]">VADA</span>
+</div>
+<h4 class="mt-2 font-title-md text-title-md text-text-on-dark-primary leading-tight">Ask Doubt</h4>
+<p class="mt-1 font-body-sm text-body-sm text-on-surface-variant">Student philosophical debate</p>
+</div>
+<span class="mt-3 font-label-caps text-label-caps text-lotus-lavender">Open Forum</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script>
+  // Micro-interaction: tactile bounce on click for buttons
+  document.querySelectorAll('button, a').forEach(el => {
+    el.addEventListener('touchstart', () => {
+      el.style.opacity = '0.9';
+    }, { passive: true });
+    el.addEventListener('touchend', () => {
+      el.style.opacity = '1';
+    }, { passive: true });
+  });
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-dim/85 backdrop-blur-xl shadow-[0_-1px_12px_rgba(0,0,0,0.15)]" data-active-classes="text-sadhana-gold font-bold"><div class="flex justify-around items-center h-16 px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center gap-0.5 min-w-[50px] h-12 transition-colors text-sadhana-gold font-bold" data-path="home" href="#"><span class="material-symbols-outlined text-[22px]">wb_sunny</span><span class="font-label-caps text-[10px] leading-tight tracking-normal">Home</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[50px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="practice" href="#"><span class="material-symbols-outlined text-[22px]">self_improvement</span><span class="font-label-caps text-[10px] leading-tight tracking-normal">Practice</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[50px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="library" href="#"><span class="material-symbols-outlined text-[22px]">menu_book</span><span class="font-label-caps text-[10px] leading-tight tracking-normal">Library</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[50px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="planner" href="#"><span class="material-symbols-outlined text-[22px]">calendar_month</span><span class="font-label-caps text-[10px] leading-tight tracking-normal">Planner</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[50px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="involved" href="#"><span class="material-symbols-outlined text-[22px]">volunteer_activism</span><span class="font-label-caps text-[10px] leading-tight tracking-normal">Seva</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[50px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="profile" href="#"><span class="material-symbols-outlined text-[22px]">account_circle</span><span class="font-label-caps text-[10px] leading-tight tracking-normal">Profile</span></a></div></nav></body></html>
